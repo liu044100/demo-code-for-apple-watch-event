@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) NSMutableArray *dataSource;
 
 @end
 

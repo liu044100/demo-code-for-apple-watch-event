@@ -14,23 +14,37 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B720540C1B0EDC0000DF04E6"
-               BuildableName = "event_demo.app"
-               BlueprintName = "event_demo"
+               BlueprintIdentifier = "B72054481B0EDC0D00DF04E6"
+               BuildableName = "event_demo WatchKit App.app"
+               BlueprintName = "event_demo WatchKit App"
                ReferencedContainer = "container:event_demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B72054251B0EDC0000DF04E6"
-               BuildableName = "event_demoTests.xctest"
-               BlueprintName = "event_demoTests"
+               BlueprintIdentifier = "B72054391B0EDC0D00DF04E6"
+               BuildableName = "event_demo WatchKit Extension.appex"
+               BlueprintName = "event_demo WatchKit Extension"
+               ReferencedContainer = "container:event_demo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B720540C1B0EDC0000DF04E6"
+               BuildableName = "event_demo.app"
+               BlueprintName = "event_demo"
                ReferencedContainer = "container:event_demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,23 +56,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B72054251B0EDC0000DF04E6"
-               BuildableName = "event_demoTests.xctest"
-               BlueprintName = "event_demoTests"
-               ReferencedContainer = "container:event_demo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B720540C1B0EDC0000DF04E6"
-            BuildableName = "event_demo.app"
-            BlueprintName = "event_demo"
+            BlueprintIdentifier = "B72054481B0EDC0D00DF04E6"
+            BuildableName = "event_demo WatchKit App.app"
+            BlueprintName = "event_demo WatchKit App"
             ReferencedContainer = "container:event_demo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -72,16 +76,27 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/event_demo">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B720540C1B0EDC0000DF04E6"
-            BuildableName = "event_demo.app"
-            BlueprintName = "event_demo"
+            BlueprintIdentifier = "B72054481B0EDC0D00DF04E6"
+            BuildableName = "event_demo WatchKit App.app"
+            BlueprintName = "event_demo WatchKit App"
             ReferencedContainer = "container:event_demo.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B72054481B0EDC0D00DF04E6"
+            BuildableName = "event_demo WatchKit App.app"
+            BlueprintName = "event_demo WatchKit App"
+            ReferencedContainer = "container:event_demo.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -91,16 +106,27 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/event_demo">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B720540C1B0EDC0000DF04E6"
-            BuildableName = "event_demo.app"
-            BlueprintName = "event_demo"
+            BlueprintIdentifier = "B72054481B0EDC0D00DF04E6"
+            BuildableName = "event_demo WatchKit App.app"
+            BlueprintName = "event_demo WatchKit App"
             ReferencedContainer = "container:event_demo.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B72054481B0EDC0D00DF04E6"
+            BuildableName = "event_demo WatchKit App.app"
+            BlueprintName = "event_demo WatchKit App"
+            ReferencedContainer = "container:event_demo.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

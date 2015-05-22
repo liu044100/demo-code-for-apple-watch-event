@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Nappi-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Nappi" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="眠い" id="XqB-dN-xVr">
+                            <color key="backgroundColor" red="0.12174670567550976" green="0.6993568497474747" blue="0.0031065421754159694" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="15"/>
+                            <connections>
+                                <segue destination="t0G-7T-6Ed" kind="push" id="ZFw-5U-7e6"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="血糖低下" id="L9q-eW-Q29">
+                            <color key="backgroundColor" red="1" green="0.55297391102127214" blue="0.19291418147590278" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="15"/>
+                        </button>
+                        <button width="1" alignment="left" title="胸が苦しい" id="B8i-Iy-QTf">
+                            <color key="backgroundColor" red="0.95799794819999995" green="0.33117369361911497" blue="0.25218754445315283" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="15"/>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Interface Controller Two-->
+        <scene sceneID="pTo-Vc-4Wv">
+            <objects>
+                <controller id="t0G-7T-6Ed" customClass="InterfaceControllerTwo">
+                    <items>
+                        <button alignment="center" backgroundImage="tap" id="rla-jA-CkI">
+                            <connections>
+                                <action selector="sendToHost" destination="t0G-7T-6Ed" id="jwX-0F-nR9"/>
+                            </connections>
+                        </button>
+                        <label alignment="center" text="眠い時、タップしてね" numberOfLines="0" id="rhU-oO-8IF"/>
+                    </items>
+                    <menu key="menu" id="MGp-BJ-xVf">
+                        <items>
+                            <menuItem title="すごく眠い" image="force_tap" id="x4P-Ve-kjF">
+                                <connections>
+                                    <action selector="sendToHostHeavy" destination="t0G-7T-6Ed" id="ojj-Lw-rex"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="449" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.24550087079999999" green="1" blue="0.14249672930000001" alpha="1" colorSpace="calibratedRGB"/>
+</document>

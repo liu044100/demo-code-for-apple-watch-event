@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Notification - event_demo WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>event_demo WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>event_demo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>B72054251B0EDC0000DF04E6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B72054481B0EDC0D00DF04E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

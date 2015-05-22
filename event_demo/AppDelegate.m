@@ -7,16 +7,31 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate{
+    NSDateFormatter *_dateFormatter;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    _dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [_dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+     //2014-12-10T12:13:43.731Z
+    
+    //local notification for iOS8
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    }
+
+    
     return YES;
 }
 
@@ -40,6 +55,38 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply{
+    NSLog(@"handleWatchKitExtensionRequest");
+    
+    if ([userInfo objectForKey:@"info"]) {
+        UINavigationController *rootNavi = (UINavigationController*)self.window.rootViewController;
+        
+        ViewController *rootVC = (ViewController*)[rootNavi topViewController];
+        
+        [rootVC.dataSource addObject:[self createObject:userInfo]];
+        
+        [rootVC.tableView reloadData];
+        
+        NSIndexPath *bottomIndex = [NSIndexPath indexPathForRow:([rootVC.dataSource count]-1) inSection:0];
+        
+        
+        
+        [rootVC.tableView scrollToRowAtIndexPath:bottomIndex atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        
+        NSLog(@"reload data");
+    }
+}
+
+-(NSArray*)createObject:(NSDictionary *)userInfo{
+    
+    NSString *des = userInfo[@"info"];
+    NSString *date = [_dateFormatter stringFromDate:[NSDate date]];
+    
+    NSArray *data = @[des, date];
+    
+    return data;
 }
 
 @end
